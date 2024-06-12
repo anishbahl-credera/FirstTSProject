@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { retrieveCart } from '../../cart/retrieve-cart/retrieve-cart.slice';
 import hotsauceImage from '../../../images/hotsauce.png';
+import { useHistory } from 'react-router-dom';
 import { RequestStatus } from '../../common/redux/redux.constants';
 import { Button } from '@material-ui/core';
 import '../../../Homepage.css';
 
 export const HomePageComponent = () => {
+  const history = useHistory();
 
   const dispatch = useDispatch();
   const retrieveCartState = useSelector(state => state.cart.retrieveCart);
@@ -51,7 +53,7 @@ export const HomePageComponent = () => {
         </div>
         
 
-        <button className="ShopNow"> Shop Now </button>
+        <button className="ShopNow" onClick={() => history.push('/shop')}> Shop Now </button>
 
       </div>
 
