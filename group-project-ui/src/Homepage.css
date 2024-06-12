@@ -17,7 +17,6 @@
 .HotsauceImage {
     height: 100vh;
     width: 20vw;
-    background-color: #fff;
     object-fit: fill;
     overflow: hidden;
 
@@ -27,7 +26,11 @@
 }
 
 .HotsauceImage img {
-    height: 100vh;
+    height: 150vh;
+    z-index: 1;
+
+    position: relative;
+    top: 120px;
 }
 
 @font-face {
@@ -43,11 +46,63 @@
     position: relative;
     bottom: 100px;
     left: 100px;
-    z-index: 1000;
+    z-index: 0;
+}
+
+.TextContainer1 p {
+    font-size: 30px;
+
+    position: relative;
+    bottom: 250px;
+    left: 100px;
 }
 
 .TextContainer2 {
     font-family: diabloFont;
     font-size: 100px;
     color: #781515;
+
+    position: relative;
+    right: 50px;
+    z-index: 0;
+}
+
+.TextContainer2 p {
+    font-size: 30px;
+
+    position: relative;
+    bottom: 250px;
+    left: 100px;
+}
+
+.description {
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
+
+.ShopNow {
+    font-family: diabloFont;
+    cursor: pointer;
+    border-radius: 0;
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: #781515;
+    color: white;
+    font-size: 20px;
+
+    position: relative;
+    top: 200px;
+    right: 300px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
