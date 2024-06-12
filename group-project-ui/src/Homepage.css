@@ -1,0 +1,53 @@
+.landingPage {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+}
+
+
+.HotsauceContainer {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HotsauceImage {
+    height: 100vh;
+    width: 20vw;
+    background-color: #fff;
+    object-fit: fill;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HotsauceImage img {
+    height: 100vh;
+}
+
+@font-face {
+    font-family: diabloFont;
+    src: url('./fonts/font.ttf');
+  }
+
+.TextContainer1 {
+    font-family: diabloFont;
+    font-size: 100px;
+    color: white;
+
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    z-index: 1000;
+}
+
+.TextContainer2 {
+    font-family: diabloFont;
+    font-size: 100px;
+    color: #781515;
+}
