@@ -1,6 +1,18 @@
 const express = require('express');
 const app = express();
+const cors = require('cors'); 
 const port = 8000;
+
+
+//cors 
+app.use(cors({
+
+  origin: ["http://localhost:3000"],
+  credentials: true,
+}));
+
+
+
 
 app.get('/', (req, res) => {
     const responseData = {
