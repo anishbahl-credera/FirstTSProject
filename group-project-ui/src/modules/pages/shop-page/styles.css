@@ -68,3 +68,67 @@ body {
     box-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
     outline: none;
   }
+  /* Style for the search button */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6a00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ee0979;
+}
+
+/* Style for error message */
+.error {
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+/* Style for the hot sauce list */
+.hot-sauce-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Style for individual hot sauce items */
+.hot-sauce-item {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hot-sauce-item h2 {
+    font-size: 1.5em;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.hot-sauce-item p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.hot-sauce-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .hot-sauce-item {
+        width: 100%;
+    }
+}

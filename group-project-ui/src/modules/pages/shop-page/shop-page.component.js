@@ -10,7 +10,7 @@ export default function ShopPageComponent() {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`https://localhost:8000`);
+      const response = await fetch(`http://localhost:8000`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -40,38 +40,19 @@ export default function ShopPageComponent() {
       {error && <div className="error">{error}</div>}
 
       <div className="hot-sauce-list">
-        {hotSauces.map((sauce) => (
-          <div key={sauce.id} className="hot-sauce-item">
-            <h2>{sauce.name}</h2>
-            <p>Scoville Level: {sauce.scoville}</p>
-            <p>Price: {sauce.price}</p>
-            <p>Ingredients: {sauce.ingredients.join(', ')}</p>
-          </div>
+      {hotSauces.map((sauce, index) => (
+                    <div key={index} className="hot-sauce-item">
+                        <h2>{sauce.name}</h2>
+                        <p>Scoville Level: {sauce.scoville}</p>
+                        <p>Price: {sauce.price}</p>
+                        <p>Ingredients: {sauce.ingredients}</p>
+                    </div>
         ))}
       </div>
     </div>
   );
 }
 
-
-
-
-
-
-/*export default function ShopPageComponent() {
-const [query, setQuery] = useState("");
-
-    return (
-
-        <div className = "SearchBar"> 
-            <label>Search Bar</label>
-            <input type="text" onChange={(e => setQuery(e.target.value))} />
-
-
-        </div>
-       
-    )
-}
 
 /*const ShopPageComponent = () => {
     // component logic
