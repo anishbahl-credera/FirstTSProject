@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(135deg, #e47e18, #db1f1f);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the container border  */
+  .HotSauceSearch {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -200px;
+  }
+  
+  /* Style for Crediab0 */
+  .cool-heading {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: glow 1.5s infinite alternate;
+    margin-bottom: 20px;
+  }
+  
+  /* Keyframes for the glow effect */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fffc39, 0 0 20px #ff2e2e, 0 0 30px #ee0979, 0 0 40px #ee0979, 0 0 50px #ff6a00, 0 0 60px #ff6a00, 0 0 70px #ee0979;
+    }
+    to {
+      text-shadow: 0 0 20px #fffc39, 0 0 30px #ff2e2e, 0 0 40px #ee0979, 0 0 50px #ee0979, 0 0 60px #ff6a00, 0 0 70px #ff6a00, 0 0 80px #ee0979;
+    }
+  }
+  
+  /* Style for the search label */
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ba4a4a;
+  }
+  
+  /* Style for the boarder */
+  input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #afa5a5;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    
+    
+  }
+  
+  /* Change border color and box shadow on focus */
+  input[type="text"]:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
+    outline: none;
+  }

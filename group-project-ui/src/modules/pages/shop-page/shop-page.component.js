@@ -2,7 +2,7 @@
 //import { useState } from "react";
 
 import React, { useState } from 'react';
-
+import './styles.css';
 export default function ShopPageComponent() {
   const [query, setQuery] = useState('');
   const [hotSauces, setHotSauces] = useState([]);
@@ -20,17 +20,22 @@ export default function ShopPageComponent() {
       setError(error.message);
     }
   };
-
+  //name, price, description, origin, ingredients, spicy level
   return (
     <div className="HotSauceSearch">
+       <center>
+        <h1 className="cool-heading">Crediablo</h1>
       <label htmlFor="search">Search Hot Sauces:</label>
+       <h1></h1>
       <input
         type="text"
         id="search"
+        placeholder="Search for hot sauces..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
+        </center> 
 
       {error && <div className="error">{error}</div>}
 
@@ -38,7 +43,8 @@ export default function ShopPageComponent() {
         {hotSauces.map((sauce) => (
           <div key={sauce.id} className="hot-sauce-item">
             <h2>{sauce.name}</h2>
-            <p>Heat Level: {sauce.heatLevel}</p>
+            <p>Scoville Level: {sauce.scoville}</p>
+            <p>Price: {sauce.price}</p>
             <p>Ingredients: {sauce.ingredients.join(', ')}</p>
           </div>
         ))}
