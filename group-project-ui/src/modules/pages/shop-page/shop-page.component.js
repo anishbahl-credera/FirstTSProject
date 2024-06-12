@@ -15,7 +15,7 @@ export default function ShopPageComponent() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      setHotSauces(data);
+      setHotSauces(data.data);
     } catch (error) {
       setError(error.message);
     }
