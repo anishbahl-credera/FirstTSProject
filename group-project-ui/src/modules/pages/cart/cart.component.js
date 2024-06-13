@@ -26,11 +26,38 @@ export default function ShopPageComponent() {
     handleSearch();
   }, []);
 
+  const handleDelete = async (name) => {
+    try {
+      const response = await fetch(`http://localhost:8000/deletecart`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name })
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      setHotSauces((prevHotSauces) => {
+        const index = prevHotSauces.findIndex(sauce => sauce.name === name);
+        if (index !== -1) {
+          const newHotSauces = [...prevHotSauces];
+          newHotSauces.splice(index, 1);
+          return newHotSauces;
+        }
+        return prevHotSauces;
+      });
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   //name, price, description, origin, ingredients, spicy level
   return (
     <div className="HotSauceSearch">
-
       {error && <div className="error">{error}</div>}
 
       <div className="hot-sauce-list">
@@ -40,12 +67,14 @@ export default function ShopPageComponent() {
             <p>Scoville Level: {sauce.scoville}</p>
             <p>Price: {sauce.price}</p>
             <p>Ingredients: {sauce.ingredients}</p>
+            <button onClick={() => handleDelete(sauce.name)}>Delete</button>
           </div>
         ))}
       </div>
     </div>
   );
 };
+
 
 
 
