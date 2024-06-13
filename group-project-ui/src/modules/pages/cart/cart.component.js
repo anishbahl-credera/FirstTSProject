@@ -2,12 +2,14 @@
 //import { useState } from "react";
 
 import React, { useState, useEffect } from 'react';
-
+import './cart.css';
 
 export default function ShopPageComponent() {
   const [query, setQuery] = useState('');
   const [hotSauces, setHotSauces] = useState([]);
   const [error, setError] = useState(null);
+  const [totalPrice, setTotalPrice] = useState(0);
+
 
   const handleSearch = async () => {
     try {
@@ -25,6 +27,10 @@ export default function ShopPageComponent() {
   useEffect(() => {
     handleSearch();
   }, []);
+
+  useEffect(() => {
+    calculateTotalPrice();
+  }, [hotSauces]);
 
   const handleDelete = async (name) => {
     try {
@@ -55,9 +61,14 @@ export default function ShopPageComponent() {
     }
   };
 
+  const calculateTotalPrice = () => {
+    const total = hotSauces.reduce((sum, sauce) => sum + sauce.price, 0);
+    setTotalPrice(total);
+  };
+
   //name, price, description, origin, ingredients, spicy level
   return (
-    <div className="HotSauceSearch">
+    <div className="cartPage">
       {error && <div className="error">{error}</div>}
 
       <div className="hot-sauce-list">
@@ -70,6 +81,10 @@ export default function ShopPageComponent() {
             <button onClick={() => handleDelete(sauce.name)}>Delete</button>
           </div>
         ))}
+      </div>
+
+      <div className="price"> 
+        <h2> Price {totalPrice || '0'} </h2>
       </div>
     </div>
   );
