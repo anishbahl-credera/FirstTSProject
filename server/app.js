@@ -12,7 +12,10 @@ app.use(cors({
 }));
 
 
-
+// GET route to retrieve the cart items
+app.get('/cart', (req, res) => {
+  res.json(cart);
+});
 
 app.get('/', (req, res) => {
     const responseData = {
@@ -31,6 +34,38 @@ app.get('/', (req, res) => {
     res.json(responseData);
   });
   //name, price, description, origin, ingredients, spicy level
+
+
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+
+// In-memory array to store cart items
+let cart = [];
+
+// POST route to add an item to the cart
+app.post('/addcart', (req, res) => {
+    const newItem = req.body;
+    
+    cart.push(newItem);
+    res.status(201).send({ message: 'Item added to cart', item: newItem });
+    
+});
+
+app.delete('/deletecart', (req, res) => {
+  const { name } = req.body;
+  const index = cart.findIndex(item => item.name === name);
+
+  if (index === -1) {
+    return res.status(404).send({ message: 'Item not found in cart' });
+  }
+
+  cart.splice(index, 1);
+  res.status(200).send({ message: 'Item removed from cart', name });
+});
+
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

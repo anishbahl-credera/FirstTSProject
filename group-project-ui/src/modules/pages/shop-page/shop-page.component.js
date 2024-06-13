@@ -30,9 +30,7 @@ export default function ShopPageComponent() {
   //name, price, description, origin, ingredients, spicy level
   return (
     <div className = "SearchPage">
-
-    
-    <div className="HotSauceSearch">
+      <div className="HotSauceSearch">
        <center>
         <h1 className="cool-heading">Crediablo</h1>
       <label htmlFor="search">Search Hot Sauces:</label>
@@ -47,7 +45,7 @@ export default function ShopPageComponent() {
       <button onClick={handleSearch}>Search</button>
         </center> 
 
-      {error && <div className="error">{error}</div>}
+        {error && <div className="error">{error}</div>}
 
       <div className="hot-sauce-list">
       {hotSauces.map((sauce, index) => (
@@ -67,7 +65,7 @@ export default function ShopPageComponent() {
         ))}
       </div>
     </div>
-    </div>
+  </div>
   );
 }
 

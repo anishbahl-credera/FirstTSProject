@@ -72,7 +72,7 @@
 
     position: relative;
     bottom: 250px;
-    left: 100px;
+    left: 60px;
 }
 
 .description {
@@ -97,6 +97,7 @@
     background-color: #781515;
     color: white;
     font-size: 20px;
+    border-radius: 0%;
 
     position: relative;
     top: 200px;
@@ -107,3 +108,32 @@
     text-align: center;
     justify-content: center;
 }
+
+.ShopNow:hover {
+    background-color: white;
+    color: #781515;
+}
+
+.slogan1 {
+    display: inline-flex;
+
+    position: relative;
+    bottom: 90px;
+}
+
+.slogan1part2 {
+    color: #781515;
+}
+
+.slogan2 {
+    display: inline-flex;
+
+    position: relative;
+    bottom: 90px;
+}
+
+.slogan2part1 {
+    color: white;
+}
+
+

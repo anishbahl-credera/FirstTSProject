@@ -9,11 +9,12 @@ import TabascoConfig from './productDetail/Tabasco';
 import LHS_Config from './productDetail/LHS';
 import ValentinaConfig from './productDetail/Valentina';
 import CrystalConfig from './productDetail/Crystal';
+import Cart from './cart/cart.component';
 // Example component to demonstrate routing with multiple pages
 const TestComp = () => (
   <div>Test</div>
 )
-
+ 
 // Config for root routes to easily add/omit routes
 // NOTE: Including linkText property will include route in navigation menu; omit this property for routes which shouldn't be in navigation
 // NOTE: You may need to update this config with more properties and map to the RootLayout if more complex routes are required
@@ -21,7 +22,7 @@ export const routes = [
   { path: '/test', linkText: 'Test', routeComponent: TestComp, exact: true },
   { path: '/shop', linkText: 'Shop', routeComponent: ShopPageComponent, exact: true },
   { path: '/productDetail', linkText: 'productDetail', routeComponent: ProductDetailComponent, exact: true },
-
+  { path: '/cart', linkText: 'cart', routeComponent: Cart, exact: true },
   //path for each sauce
   { path: '/FranksRedHot', linkText: 'FranksRedHot', routeComponent: ProductDetailComponent, exact: true },
   { path: '/HuyFong', linkText: 'HuyFong', routeComponent: HuyFongConfig, exact: true },
@@ -38,8 +39,3 @@ export const routes = [
 ];
 
 export default routes;
-
-
-
-//franks red hot
-//texas pete
