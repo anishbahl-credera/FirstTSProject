@@ -23,34 +23,34 @@ export default function ShopPageComponent() {
   //name, price, description, origin, ingredients, spicy level
   return (
     <div className="SearchPage">
-    <div className="HotSauceSearch">
-       <center>
-        <h1 className="cool-heading">Crediablo</h1>
-      <label htmlFor="search">Search Hot Sauces:</label>
-       <h1></h1>
-      <input
-        type="text"
-        id="search"
-        placeholder="Search for hot sauces..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-        </center> 
+      <div className="HotSauceSearch">
+        <center>
+          <h1 className="cool-heading">Crediablo</h1>
+        <label htmlFor="search">Search Hot Sauces:</label>
+        <h1></h1>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for hot sauces..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+          </center> 
 
-      {error && <div className="error">{error}</div>}
+        {error && <div className="error">{error}</div>}
 
-      <div className="hot-sauce-list">
-      {hotSauces.map((sauce, index) => (
-                    <div key={index} className="hot-sauce-item">
-                        <h2>{sauce.name}</h2>
-                        <p>Scoville Level: {sauce.scoville}</p>
-                        <p>Price: {sauce.price}</p>
-                        <p>Ingredients: {sauce.ingredients}</p>
-                    </div>
-        ))}
+        <div className="hot-sauce-list">
+        {hotSauces.map((sauce, index) => (
+                      <div key={index} className="hot-sauce-item">
+                          <h2>{sauce.name}</h2>
+                          <p>Scoville Level: {sauce.scoville}</p>
+                          <p>Price: {sauce.price}</p>
+                          <p>Ingredients: {sauce.ingredients}</p>
+                      </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 }
