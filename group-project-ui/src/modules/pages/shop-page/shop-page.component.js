@@ -3,11 +3,13 @@
 
 import React, { useState } from 'react';
 import './styles.css';
+import { useHistory } from 'react-router-dom';
 export default function ShopPageComponent() {
   const [query, setQuery] = useState('');
   const [hotSauces, setHotSauces] = useState([]);
   const [error, setError] = useState(null);
-
+  const history = useHistory();
+  
   const handleSearch = async () => {
     try {
       const response = await fetch(`http://localhost:8000`);
@@ -51,9 +53,16 @@ export default function ShopPageComponent() {
       {hotSauces.map((sauce, index) => (
                     <div key={index} className="hot-sauce-item">
                         <h2>{sauce.name}</h2>
+                        
                         <p>Scoville Level: {sauce.scoville}</p>
                         <p>Price: {sauce.price}</p>
                         <p>Ingredients: {sauce.ingredients}</p>
+                        <button 
+                className="more" 
+                onClick={() => history.push(`/productDetail/${sauce.id}`)}
+              >
+                More...
+              </button>
                     </div>
         ))}
       </div>
@@ -62,12 +71,3 @@ export default function ShopPageComponent() {
   );
 }
 
-
-/*const ShopPageComponent = () => {
-    // component logic
-    return (
-        <div>This is the shopping page</div>
-    )
-  };
- */ 
-  //export default ShopPageComponent;
