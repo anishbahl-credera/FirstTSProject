@@ -5,8 +5,14 @@ POST http://localhost:8000/addcart HTTP/1.1
 content-type: application/json
 
 {
-    "name": "bruhbruh",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+             "name": "Frank's RedHot",
+            "price": 3.64, "description": " Frank's RedHot Original Cayenne Pepper Hot Sauce is made with a premium blend of aged cayenne peppers to add a kick of heat and whole lot of flavor to your favorite foods. Bring the heat to wings, chicken sandwiches, buffalo chicken dip, eggs -- put that $#!t on everything! Our sauce is essential at tailgates, parties, cookouts, you name it. Frank's Hot Sauce is a recipe that has been tantalizing taste buds since 1964, and it's not stopping anytime soon." 
+            ,"origin": "USA", 
+            "ingredients": "Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder",
+             "Scoville" : 450,
+              "Size" : 12,
+               "Image" : "https://ibb.co/JsRZjQm"
+
 }
 ###
 DELETE http://localhost:8000/deletecart HTTP/1.1

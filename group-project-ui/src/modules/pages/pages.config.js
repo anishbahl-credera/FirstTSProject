@@ -9,7 +9,7 @@ import TabascoConfig from './productDetail/Tabasco';
 import LHS_Config from './productDetail/LHS';
 import ValentinaConfig from './productDetail/Valentina';
 import CrystalConfig from './productDetail/Crystal';
-import Cart from './cart/Cart';
+import Cart from './cart/cart.component';
 // Example component to demonstrate routing with multiple pages
 const TestComp = () => (
   <div>Test</div>
