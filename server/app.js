@@ -54,15 +54,16 @@ app.post('/addcart', (req, res) => {
 
 app.delete('/deletecart', (req, res) => {
   const { name } = req.body;
-  const initialLength = cart.length;
-  cart = cart.filter(item => item.name !== name);
+  const index = cart.findIndex(item => item.name === name);
 
-  if (cart.length === initialLength) {
+  if (index === -1) {
     return res.status(404).send({ message: 'Item not found in cart' });
   }
 
+  cart.splice(index, 1);
   res.status(200).send({ message: 'Item removed from cart', name });
 });
+
 
 
 
