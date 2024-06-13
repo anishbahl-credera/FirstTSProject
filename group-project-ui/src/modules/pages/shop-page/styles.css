@@ -1,4 +1,3 @@
-
 .SearchPage {
     background: linear-gradient(135deg, #e47e18, #db1f1f);
     font-family: 'Arial', sans-serif;
@@ -10,7 +9,7 @@
     height: 100vh;
   }
   
-  /* Style for the container border */
+  /* Style for the container border  */
   .HotSauceSearch {
     background: #ffffff;
     padding: 20px;
@@ -18,11 +17,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: -200px;
-    width: 80%;
-    max-width: 800px;
   }
   
-  /* Style for Crediablo */
+  /* Style for Crediab0 */
   .cool-heading {
     font-size: 48px;
     font-weight: bold;
@@ -52,7 +49,7 @@
     color: #ba4a4a;
   }
   
-  /* Style for the input text field */
+  /* Style for the boarder */
   input[type="text"] {
     width: 80%;
     padding: 15px;
@@ -61,6 +58,8 @@
     border-radius: 5px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s, box-shadow 0.3s;
+    
+    
   }
   
   /* Change border color and box shadow on focus */
@@ -69,9 +68,8 @@
     box-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
     outline: none;
   }
-  
   /* Style for the search button */
-  button {
+button {
     padding: 10px 20px;
     font-size: 18px;
     color: #fff;
@@ -80,33 +78,28 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #ee0979;
-  }
-  
-  /* Style for error message */
-  .error {
+}
+
+/* Style for error message */
+.error {
     color: #d9534f;
     margin-top: 10px;
-  }
-  
-  /* Style for the hot sauce list */
-  .hot-sauce-list {
-    max-height: 400px; /* Adjust the height as needed */
-    overflow-y: scroll;
+}
+
+/* Style for the hot sauce list */
+.hot-sauce-list {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Style for individual hot sauce items */
-  .hot-sauce-item {
+}
+
+/* Style for individual hot sauce items */
+.hot-sauce-item {
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -115,55 +108,27 @@
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
-    position: relative;
-  }
-  
-  .hot-sauce-item h2 {
+}
+
+.hot-sauce-item h2 {
     font-size: 1.5em;
     color: #d9534f;
     margin-bottom: 10px;
-  }
-  
-  .hot-sauce-item p {
+}
+
+.hot-sauce-item p {
     font-size: 1em;
     margin: 5px 0;
-  }
-  
-  .hot-sauce-item img {
+}
+
+.hot-sauce-item img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-  }
-  
+}
 
-  .ShopNow {
-    
-    background-color: #96220d;
-    color: white;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    font-size: 0.9em;
-    border-radius:15px;
-  }
-  .more {
-    
-    background-color: #96220d;
-    color: white;
-    border: none;
- 
-    cursor: pointer;
-    font-size: 0.7em;
-    border-radius:15px;
-    top: 5px;
-    right: -50px;
-  }
-  .ShopNow:hover {
-    background-color: #e97a1a;
-  }
-  
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .hot-sauce-item {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
