@@ -32,10 +32,10 @@ export const routes = [
   { path: '/Tabasco', linkText: 'Tabasco', routeComponent: TabascoConfig, exact: true },
   { path: '/LHS', linkText: 'Louisiana', routeComponent: LHS_Config, exact: true },
   { path: '/Valentina', linkText: 'Valentina', routeComponent: ValentinaConfig, exact: true },
-  { path: '/Crystal', linkText: 'Valentina', routeComponent: CrystalConfig, exact: true },
+  { path: '/Crystal', linkText: 'Crystal', routeComponent: CrystalConfig, exact: true },
   // Currently a fallback route which will match if any routes above are not exactly matched
   // NOTE: Fallback routes should always be last
   { path: '/', linkText: 'Home', routeComponent: HomePageComponent, exact: false },
 ];
- 
+
 export default routes;

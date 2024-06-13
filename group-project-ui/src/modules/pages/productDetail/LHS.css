@@ -1,41 +1,67 @@
-.bodyLHS {
+@font-face {
+    font-family: diabloF;
+    src: url('../../../fonts/font.ttf');
+}
+
+
+body.bodyLHS {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../productDetail/LHS.png');
+    background-image: url('../productDetail/Valentina.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #333;
-
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    padding: 0; /* Remove padding-right to avoid offset */
 
 }
 
 .bodyLHS .hot-sauce-list {
+    font-family: diabloF;
+    font-size: 14px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent background */
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    margin: 50px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adding a box shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
 }
 
-.bodyLHS .hot-sauce-list h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-    color: #d35400; 
+.bodyLHS .pic {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.bodyLHS .hot-sauce-list p {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-.bodyLHS .hot-sauce-item img {
-    max-width: 100%;
+.bodyLHS .pic img {
+    max-width: 50px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.bodyLHS .hot-sauce-list .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bodyLHS .hot-sauce-list .info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #d35400; /* Cholula's signature color */
+}
+
+.bodyLHS .hot-sauce-list .info p {
+    margin: 5px 0;
+    font-size: 1.2em;
 }
