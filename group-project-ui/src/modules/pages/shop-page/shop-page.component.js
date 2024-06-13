@@ -15,13 +15,19 @@ export default function ShopPageComponent() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      setHotSauces(data.data);
+      const filteredData = data.data.filter(sauce => 
+        sauce.name.toLowerCase().includes(query.toLowerCase())
+      );
+      setHotSauces(filteredData);
     } catch (error) {
       setError(error.message);
     }
   };
+
+  
   //name, price, description, origin, ingredients, spicy level
   return (
+    
     <div className="HotSauceSearch">
        <center>
         <h1 className="cool-heading">Crediablo</h1>
