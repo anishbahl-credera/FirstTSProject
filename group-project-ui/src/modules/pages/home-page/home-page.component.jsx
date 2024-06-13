@@ -40,7 +40,9 @@ export const HomePageComponent = () => {
 
        <div className="TextContainer1"> 
           <h1> CRED </h1>
-          <p> It's not just SPICY </p>
+          <div className="">
+            <p> It's not just SPICY </p>
+          </div>
         </div>
 
         <div className="HotsauceImage"> 

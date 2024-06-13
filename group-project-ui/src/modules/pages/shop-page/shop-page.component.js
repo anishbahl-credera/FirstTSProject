@@ -22,6 +22,7 @@ export default function ShopPageComponent() {
   };
   //name, price, description, origin, ingredients, spicy level
   return (
+    <div className="SearchPage">
     <div className="HotSauceSearch">
        <center>
         <h1 className="cool-heading">Crediablo</h1>
@@ -49,6 +50,7 @@ export default function ShopPageComponent() {
                     </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

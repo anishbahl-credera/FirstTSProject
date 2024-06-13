@@ -9,8 +9,7 @@ export default function ProductDetailComponent() {
       try {
         const response = await fetch(`http://localhost:8000`); // Use relative path
         const data = await response.json();
-        console.log(data);
-        setHotSauces(data);
+        setHotSauces(data.data[0]);
       } catch (error) {
         setError(error.message);
         console.error('Fetch error:', error);
@@ -21,22 +20,12 @@ export default function ProductDetailComponent() {
   }, []);
 
     return (
-      <div className="HotSauceSearch">
-        {error && <div className="error">Load failed: {error}</div>}
-  
+      <div className="HotSauceSearch">  
         <div className="hot-sauce-list">
-          {Array.isArray(hotSauces) && hotSauces.map((sauce, index) => (
-            <div key={index} className="hot-sauce-item">
-              <h2>{sauce.name}</h2>
-              <img src={sauce.Image} alt={`${sauce.name} image`} />
-              <p><strong>Price:</strong> ${sauce.price}</p>
-              <p><strong>Description:</strong> {sauce.description}</p>
-              <p><strong>Origin:</strong> {sauce.origin}</p>
-              <p><strong>Ingredients:</strong> {sauce.ingredients}</p>
-              <p><strong>Scoville:</strong> {sauce.Scoville}</p>
-              <p><strong>Size:</strong> {sauce.Size} oz</p>
-            </div>
-          ))}
+
+          <h2> {hotSauces.name} </h2>
+          <h2> {hotSauces.Scoville} </h2>
+
         </div>
       </div>
     );
