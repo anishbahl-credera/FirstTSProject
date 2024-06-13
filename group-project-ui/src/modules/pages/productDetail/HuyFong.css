@@ -1,0 +1,41 @@
+.bodyHuyFong {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../productDetail/HuyFong.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.bodyHuyFong .hot-sauce-list {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bodyHuyFong .hot-sauce-list h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #d35400; 
+}
+
+.bodyHuyFong .hot-sauce-list p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.bodyHuyFong .hot-sauce-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

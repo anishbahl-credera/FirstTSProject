@@ -40,7 +40,10 @@ export const HomePageComponent = () => {
 
        <div className="TextContainer1"> 
           <h1> CRED </h1>
-          <p> It's not just SPICY </p>
+          <div className="slogan1">
+            <p className="slogan1part1"> It's not just&nbsp; </p>
+            <p className="slogan1part2"> SPICY- </p>
+          </div>
         </div>
 
         <div className="HotsauceImage"> 
@@ -49,7 +52,10 @@ export const HomePageComponent = () => {
          
         <div className="TextContainer2">
           <h1> IABLO </h1>
-          <p> It's INCREDIABLO </p>
+          <div className="slogan2">
+            <p className="slogan2part1"> It's absolutely&nbsp;</p>
+            <p className="slogan2part2"> INCREDIABLO! </p>
+          </div>
         </div>
         
 
