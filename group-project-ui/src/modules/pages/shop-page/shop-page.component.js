@@ -55,7 +55,7 @@ export default function ShopPageComponent() {
                         <h2>{sauce.name}</h2>
                         
                         <p>Scoville Level: {sauce.scoville}</p>
-                        <p>Price: {sauce.price}</p>
+                        <p>Price: ${sauce.price}</p>
                         <p>Ingredients: {sauce.ingredients}</p>
                         <button 
                 className="more" 
