@@ -2,92 +2,97 @@
     min-width: 100vw;
     min-height: 100vh;
     background-color: black;
-}
-
-
-.HotsauceContainer {
+  }
+  
+  .HotsauceContainer {
     width: 100vw;
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.HotsauceImage {
+    position: relative;
+  }
+  
+  .HotsauceImage {
     height: 100vh;
     width: 30vw;
     object-fit: fill;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.HotsauceImage img {
+    transition: transform 0.3s ease;
+  }
+  
+  .HotsauceImage img {
     height: 150vh;
     z-index: 1;
-
     position: relative;
     top: 120px;
-}
-
-@font-face {
+    transition: transform 0.3s ease;
+  }
+  
+  .HotsauceImage:hover img {
+    transform: scale(1.1); /* Zoom effect */
+  }
+  
+  @font-face {
     font-family: diabloFont;
     src: url('./fonts/font.ttf');
   }
-
-.TextContainer1 {
+  
+  .TextContainer1,
+  .TextContainer2 {
     font-family: diabloFont;
     font-size: 100px;
     color: white;
-
     position: relative;
+    z-index: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .TextContainer1 {
     bottom: 100px;
     left: 100px;
-    z-index: 0;
-}
-
-.TextContainer1 p {
+  }
+  
+  .TextContainer1 p {
     font-size: 30px;
-
     position: relative;
     bottom: 250px;
     left: 100px;
-}
-
-.TextContainer2 {
-    font-family: diabloFont;
-    font-size: 100px;
+  }
+  
+  .TextContainer2 {
     color: #781515;
-
-    position: relative;
     right: 50px;
-    z-index: 0;
-}
-
-.TextContainer2 p {
+  }
+  
+  .TextContainer2 p {
     font-size: 30px;
-
     position: relative;
     bottom: 250px;
     left: 60px;
-}
-
-.description {
+  }
+  
+  .TextContainer1:hover,
+  .TextContainer2:hover {
+    transform: translateY(-10px); /* Move up effect */
+    color: #b80d0d; /* Change color on hover */
+  }
+  
+  .description {
     font-family: diabloFont;
     width: 300px;
     height: 50px;
     color: white;
     font-size: 15px;
-
     position: relative;
     top: 100px;
     left: 300px;
-}
-
-.ShopNow {
+  }
+  
+  .ShopNow {
     font-family: diabloFont;
     cursor: pointer;
     border-radius: 0;
@@ -97,43 +102,38 @@
     background-color: #781515;
     color: white;
     font-size: 20px;
-    border-radius: 0%;
-
     position: relative;
     top: 200px;
     right: 300px;
-
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-}
-
-.ShopNow:hover {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .ShopNow:hover {
     background-color: white;
     color: #781515;
-}
-
-.slogan1 {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .slogan1 {
     display: inline-flex;
-
     position: relative;
     bottom: 90px;
-}
-
-.slogan1part2 {
+  }
+  
+  .slogan1part2 {
     color: #781515;
-}
-
-.slogan2 {
+  }
+  
+  .slogan2 {
     display: inline-flex;
-
     position: relative;
     bottom: 90px;
-}
-
-.slogan2part1 {
+  }
+  
+  .slogan2part1 {
     color: white;
-}
-
-
+  }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './TexasPete.css';
+import Image from './tpf.png';
 
 export default function TexasPeteConfig() {
   const [hotSauces, setHotSauces] = useState([]);
@@ -21,14 +22,20 @@ export default function TexasPeteConfig() {
     
   }, []);
 
-  return (
+  return (<center>
+
+ 
     <div className="bodyTexasPete">
       {error && <div className="error">Load failed: {error}</div>}
       {hotSauces ? (
         <div className="hot-sauce-list">
-          <img src={hotSauces.Image} alt={`${hotSauces.name} image`} />
-          <h2>{hotSauces.name}</h2>
-          <p><strong>Price:</strong> ${hotSauces.price}</p>
+          <div className="pic">
+            <img src={Image} alt={`${hotSauces.name} image`} />
+            <div className="info">
+              <h2>{hotSauces.name}</h2>
+              <p><strong>Price:</strong> ${hotSauces.price}</p>
+            </div>
+          </div>
           <p><strong>Description:</strong> {hotSauces.description}</p>
           <p><strong>Ingredients:</strong> {hotSauces.ingredients}</p>
           <p><strong>Scoville Units:</strong> {hotSauces.Scoville}</p>
@@ -39,5 +46,5 @@ export default function TexasPeteConfig() {
         <div className="loading">Loading...</div>
       )}
     </div>
-  );
+   </center>);
 }
