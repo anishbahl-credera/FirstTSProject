@@ -1,54 +1,66 @@
-.bodyFranks {
+@font-face {
+    font-family: diabloF;
+    src: url('../../../fonts/font.ttf');
+}
+
+body.bodyFranksRedHot {
+    font-family: diabloF;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('../productDetail/frnksredhot.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #333;
-
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-
+    padding: 0; 
 }
 
-.bodyFranks .hot-sauce-list {
+.bodyFranksRedHot .hot-sauce-list {
+    font-family: diabloF;
+    font-size: 13.5px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
-    max-width: 800px;
-    margin: 50px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    word-break: break-word; 
 }
 
-.bodyFranks .hot-sauce-list h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-    color: #d35400; 
-}
-
-.bodyFranks .hot-sauce-list p {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-.bodyFranks .hot-sauce-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.bodyFranksRedHot .pic {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-/*
-.bodyFranks .error {
-    color: red;
-    font-weight: bold;
+.bodyFranksRedHot .pic img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
 }
 
-.bodyFranks .loading {
+.bodyFranksRedHot .hot-sauce-list .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bodyFranksRedHot .hot-sauce-list .info h2 {
+    margin: 0;
     font-size: 1.5em;
-    color: #999;
+    color: #d35400; /* Cholula's signature color */
 }
 
-*/
+.bodyFranksRedHot .hot-sauce-list .info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
