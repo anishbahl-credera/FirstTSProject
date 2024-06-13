@@ -1,7 +1,4 @@
-@font-face {
-    font-family: diabloFont;
-    src: url('./font.ttf');
-  }
+
 .SearchPage {
     background: linear-gradient(135deg, #000000, #6a0000);
     font-family: 'Arial', sans-serif;
