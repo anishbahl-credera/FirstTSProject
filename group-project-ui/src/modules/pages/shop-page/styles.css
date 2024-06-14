@@ -1,5 +1,6 @@
+
 .SearchPage {
-    background: linear-gradient(135deg, #000000, #6a0000);
+    background: linear-gradient(135deg, #9a0404, #6a0000);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
@@ -12,9 +13,9 @@
   /* Style for the container border */
   .HotSauceSearch {
     background: #ffffff;
-    padding: 20px;
+ 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
     text-align: center;
     margin-top: -200px;
     width: 80%;
@@ -165,4 +166,18 @@
     .hot-sauce-item {
       width: 100%;
     }
+  }
+  @font-face {
+    font-family: diabloFont;
+    src: url('./font.ttf');
+  }
+  .textc {
+    font-family:diabloFont;
+    color: #ffffff;
+    font-size: 300px;
+    position: absolute;
+    right: 150px;
+    top: -50px;
+    bottom: -50px;
+    left: 0px;
   }
