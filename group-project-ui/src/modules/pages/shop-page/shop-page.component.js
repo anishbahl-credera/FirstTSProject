@@ -52,7 +52,8 @@ export default function ShopPageComponent() {
                     <div key={index} className="hot-sauce-item">
                         <h2>{sauce.name}</h2>
 
-                        <p>Scoville Level: {sauce.scoville}</p>
+                        <p>ID: {sauce.id}</p>
+                        <p>Scoville Level: {sauce.Scoville}</p>
                         <p>Price: ${sauce.price}</p>
                         <p>Ingredients: {sauce.ingredients}</p>
                         <button 
