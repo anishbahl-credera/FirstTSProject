@@ -3,6 +3,15 @@
 
 import React, { useState, useEffect } from 'react';
 import './cart.css';
+import cholula from './cholula.png'
+import crystal from './crystal.png'
+import frank from './frnksredhot.png'
+import Huy from './HuyFong.png'
+import LHS from './LHS.png'
+import tabasco from './tabasco.png'
+import Tapatio from './Tapatio.png'
+import tpf from './tpf.png'
+import Valentina from './Valentina.png'
 
 export default function ShopPageComponent() {
   const [query, setQuery] = useState('');
@@ -66,6 +75,32 @@ export default function ShopPageComponent() {
     setTotalPrice(total);
   };
 
+  const getImage = (name) => {
+    switch (name) {
+      case 'Cholula':
+        return cholula;
+      case 'Crystal':
+        return crystal;
+      case 'Frank\'s RedHot':
+        return frank;
+      case 'Huy Fong Sriracha':
+        return Huy;
+      case 'Louisiana Hot Sauce':
+        return LHS;
+      case 'Tabasco':
+        return tabasco;
+      case 'Tapatío':
+        return Tapatio;
+      case 'Texas Pete':
+        return tpf;
+      case 'Valentina':
+        return Valentina;
+      default:
+        return null;
+    }
+  };
+
+
   //name, price, description, origin, ingredients, spicy level
   return (
     <div className="cartPage">
@@ -85,7 +120,9 @@ export default function ShopPageComponent() {
           {hotSauces.map((sauce, index) => (
             <div key={index} className="cartitem">
               <div className="imageContainer">
-                <div className="imageBlock"> </div>
+                <div className="imageBlock">
+                    <img src={getImage(sauce.name)} alt="Hot Sauce"/>
+                </div>
               </div>
               <div className="nameContainer">
                 <p className="sauceName"> {sauce.name} </p>
