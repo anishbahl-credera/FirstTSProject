@@ -71,20 +71,56 @@ export default function ShopPageComponent() {
     <div className="cartPage">
       {error && <div className="error">{error}</div>}
 
-      <div className="hot-sauce-list">
-        {hotSauces.map((sauce, index) => (
-          <div key={index} className="hot-sauce-item">
-            <h2>{sauce.name}</h2>
-            <p>Scoville Level: {sauce.scoville}</p>
-            <p>Price: {sauce.price}</p>
-            <p>Ingredients: {sauce.ingredients}</p>
-            <button className="ShopNow" onClick={() => handleDelete(sauce.name)}>Delete</button>
+      <div className="entireContainer">
+        <div className="cartList">
+          <div className="headerContainer">
+            <div className="cartHeaders">
+              <p> Product </p>
+              <p> Name </p>
+              <p> Delete </p>
+              <p> Price </p>
+            </div>
           </div>
-        ))}
-      </div>
 
-      <div className="price"> 
-        <h2> Price {totalPrice.toFixed(2) || '0'} </h2>
+          {hotSauces.map((sauce, index) => (
+            <div key={index} className="cartitem">
+              <div className="imageContainer">
+                <div className="imageBlock"> </div>
+              </div>
+              <div className="nameContainer">
+                <p className="sauceName"> {sauce.name} </p>
+              </div>
+              <div className="priceContainer">
+                <p className="price"> ${sauce.price}</p>
+              </div>
+              <button className="deleteButton" onClick={() => handleDelete(sauce.name)}>Delete</button>
+            </div>
+          ))}
+        </div>
+        <div className="checkoutSection">
+          <div className="lineContainer">
+            <div className="line"></div>
+          </div>
+          <div className="totalContainer"> 
+            <p className="cartTotal"> cart total: &nbsp;&nbsp; </p>
+            <p className="totalPrice"> ${totalPrice.toFixed(2) || '0'} </p>
+          </div>
+          <div className="shippingtaxesContainer">
+            <p className="shippingtaxes"> Shipping & taxes calculated at checkout </p>
+          </div> 
+          <div className="checkoutButtonContainer">
+            <button className="checkoutButton"> Checkout </button>
+          </div>
+
+          <div className="bottomSection">
+            <div className="returnContainer">
+              <p> ALL SALES ARE FINAL. WE DO NOT ACCEPT RETURNS OR EXCHANGES </p>
+            </div>
+            <div className="lineContainer2">
+              <div className="line"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

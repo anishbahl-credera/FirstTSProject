@@ -3,10 +3,6 @@
     src: url('../../../fonts/font.ttf');
 }
 
-
-body{
-    background-color: black;
-}
 body.bodyTapatio {
     margin: 0;
     font-family: Arial, sans-serif;

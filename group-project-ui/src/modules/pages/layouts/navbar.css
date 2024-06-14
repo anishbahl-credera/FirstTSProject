@@ -1,5 +1,6 @@
 .navbar {
     font-family: diabloFont;
+    background-color: transparent;
 }
 
 .navbar ul {
@@ -19,9 +20,10 @@
 }
 
 .navbar img {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     vertical-align: middle;
+    padding: 0px;
 
     display: flex;
     justify-content: center;
@@ -39,9 +41,10 @@
 .icon {
     font-size: 30px;
     cursor: pointer;
+    color: #781515;
 
     position: relative;
-    top: 3px;
+    bottom: 2px;
 }
 
 @font-face {
@@ -51,8 +54,8 @@
 
 .links a {
     font-family: diabloFont;
-    color: black;
     text-decoration: none;
+    color: #781515;
 
     display: flex;
     justify-content: center;
@@ -61,7 +64,7 @@
 
 .dropdownButton {
     font-size: 20px;
-    color: black;
+    color: #781515;
 
     display: flex;
     justify-content: center;
@@ -87,8 +90,8 @@
 .dropdownContent {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    width: 100px;
+    background-color: white;
+    width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }

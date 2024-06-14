@@ -7,6 +7,7 @@ import {
 import rootRoutes from '../pages.config';
 import pepperGIF from '../../../images/pepper.gif';
 import { TiShoppingCart } from "react-icons/ti";
+import { useHistory } from 'react-router-dom';
 import './navbar.css';
 
 export const RootLayout = () => (
@@ -27,13 +28,13 @@ export const RootLayout = () => (
               <Link to={'/TexasPete'}> Texas Pete </Link>
               <Link to={'/Tapatio'}> Tapatio </Link>
               <Link to={'/Tabasco'}> Tabasco </Link>
-              <Link to={'/LHS'}> Louisiana Hot Sauce </Link>
+              <Link to={'/LHS'}> Louisiana Hot </Link>
               <Link to={'/Valentina'}> Valentina </Link>
               <Link to={'/Crystal'}> Crystal </Link>
             </div>
           </div>
           <div className="icon">
-            <TiShoppingCart />
+          <Link to={'/cart'}> <TiShoppingCart /> </Link>
           </div>
         </li>
       </ul>

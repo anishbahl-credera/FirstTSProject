@@ -20,9 +20,8 @@ const TestComp = () => (
 // NOTE: You may need to update this config with more properties and map to the RootLayout if more complex routes are required
 export const routes = [
   { path: '/shop', linkText: 'Shop', routeComponent: ShopPageComponent, exact: true },
-  { path: '/productDetail', linkText: 'productDetail', routeComponent: ProductDetailComponent, exact: true },
   { path: '/cart', linkText: 'cart', routeComponent: Cart, exact: true },
-  
+
   //path for each sauce
   { path: '/FranksRedHot', linkText: 'FranksRedHot', routeComponent: ProductDetailComponent, exact: true },
   { path: '/HuyFong', linkText: 'HuyFong', routeComponent: HuyFongConfig, exact: true },

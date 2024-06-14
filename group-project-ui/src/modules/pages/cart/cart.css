@@ -1,4 +1,223 @@
+@font-face {
+    font-family: diabloFont;
+    src: url('../../pages/cart/cart.component.js');
+}
+
+.entireContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cartPage {
+    font-family: diabloFont;
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(135deg, #000000, #6a0000);
+    overflow: hidden;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainer {
+    width: 40vw;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartHeaders {
+    display: inline-flex;
+    gap: 100px;
+    padding-top: -20px;
+    font-size: 15px;
+}
+
+.cartList {
+    width: 40vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.deleteButton {
+    font-family: diabloFont;
+    height: 40px;
+
+    position: relative;
+    left: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartitem {
+    display: flex;
+    margin-bottom: -300px;
+}
+
+.imageContainer {
+    width: 7vw;
+    height: 50vh;
+
+    position: relative;
+    left: 40px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.imageBlock {
+    width: 70px;
+    height: 70px;
+    gap: 5px;
+    background-color: black;
+}
+
+.nameContainer {
+    width: 7vw;
+    height: 50vh;
+
+    position: relative;
+    left: 75px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.priceContainer {
+    width: 7vw;
+    height: 50vh;
+
+    position: relative;
+    left: 240px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.checkoutSection {
+    width: 25vw;
+    height: 70vh;
+    background-color: #781515;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+.lineContainer {
+    width: 20vw;
+    height: 5vh;
+
+    position: relative;
+    top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.line {
+    height: 5px;
+    width: 15vw;
+    background-color: white;
+}
+
+.totalContainer {
+    width: 20vw;
+    margin-left: 50px;
+
+    position: relative;
+    top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.cartTotal {
+    letter-spacing: 3px;
+    color: white;
+}
+
+.totalPrice {
+    font-size: 30px;
+    color: white;
+}
+
+.shippingtaxesContainer {
+    width: 20vw;
+    height: 5vh;
+    font-size: 12px;
+    margin-left: 50px;
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.shippingtaxes {
+    color: white;
+}
+
+.checkoutButtonContainer {
+    width: 20vw;
+    margin-left: 50px;
+
+    position: relative;
+    top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.checkoutButton {
+    font-family: diabloFont;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #781515;
+}
+
+.checkoutButton:hover {
+    background-color: #a7fab6;
+}
+
+
+.lineContainer2 {
+    width: 23vw;
+    height: 5vh;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.returnContainer {
+    font-size: 12px;
+    width: 23vw;
+    height: 15px;
+    color: white;
+
+    display: flex;
+    justify-content: right;
+    align-items: bottom;
+}
+
+.bottomSection {
+    position: relative;
+    top: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
