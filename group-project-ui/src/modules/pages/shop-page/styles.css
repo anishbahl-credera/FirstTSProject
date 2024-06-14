@@ -1,6 +1,6 @@
 
 .SearchPage {
-    background: linear-gradient(135deg, #e47e18, #db1f1f);
+    background: linear-gradient(135deg, #e47e18, #db1f1f) !important;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;

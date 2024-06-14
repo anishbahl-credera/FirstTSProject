@@ -3,10 +3,11 @@
     src: url('../../../fonts/font.ttf');
 }
 
+
 body.bodyTabasco {
+    background: linear-gradient(135deg, #000000, #6a0000);
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../productDetail/Valentina.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,9 +20,9 @@ body.bodyTabasco {
 
 }
 
-.bodyTasbaco .hot-sauce-list {
+.bodyTabasco .hot-sauce-list {
     font-family: diabloF;
-    font-size: 13px;
+    font-size: 13.5px;
     text-align: center;
     background: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent background */
     padding: 20px;
@@ -32,35 +33,35 @@ body.bodyTabasco {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 900px;
+    height: 800px;
 }
 
-.bodyTasbaco .pic {
+.bodyTabasco .pic {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.bodyTasbaco .pic img {
+.bodyTabasco .pic img {
     max-width: 50px;
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
 }
 
-.bodyTasbaco .hot-sauce-list .info {
+.bodyTabasco .hot-sauce-list .info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.bodyTasbaco .hot-sauce-list .info h2 {
+.bodyTabasco .hot-sauce-list .info h2 {
     margin: 0;
     font-size: 1.5em;
     color: #d35400; /* Cholula's signature color */
 }
 
-.bodyTasbaco .hot-sauce-list .info p {
+.bodyTabasco .hot-sauce-list .info p {
     margin: 5px 0;
     font-size: 1.2em;
 }

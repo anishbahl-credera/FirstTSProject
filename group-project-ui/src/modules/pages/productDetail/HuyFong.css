@@ -4,6 +4,7 @@
 }
 
 body.bodyHuyFong {
+    background: linear-gradient(135deg, #000000, #6a0000);
     font-family: diabloF;
     margin: 0;
     background-size: cover;
@@ -19,11 +20,11 @@ body.bodyHuyFong {
 
 .bodyHuyFong .hot-sauce-list {
     font-family: diabloF;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     max-width: 80%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: flex;

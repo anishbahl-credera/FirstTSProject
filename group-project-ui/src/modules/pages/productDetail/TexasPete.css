@@ -6,9 +6,9 @@
 
 
 body.bodyTexasPete {
+    background: linear-gradient(135deg, #000000, #6a0000);
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../productDetail/Valentina.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,7 +17,7 @@ body.bodyTexasPete {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 0; /* Remove padding-right to avoid offset */
+    padding: 0; 
 
 }
 
@@ -25,11 +25,11 @@ body.bodyTexasPete {
     font-family: diabloF;
     font-size: 13.5px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent background */
+    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adding a box shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +59,7 @@ body.bodyTexasPete {
 .bodyTexasPete .hot-sauce-list .info h2 {
     margin: 0;
     font-size: 1.5em;
-    color: #d35400; /* Cholula's signature color */
+    color: #d35400; 
 }
 
 .bodyTexasPete .hot-sauce-list .info p {
