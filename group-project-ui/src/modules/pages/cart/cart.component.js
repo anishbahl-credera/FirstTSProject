@@ -78,13 +78,13 @@ export default function ShopPageComponent() {
             <p>Scoville Level: {sauce.scoville}</p>
             <p>Price: {sauce.price}</p>
             <p>Ingredients: {sauce.ingredients}</p>
-            <button onClick={() => handleDelete(sauce.name)}>Delete</button>
+            <button className="ShopNow" onClick={() => handleDelete(sauce.name)}>Delete</button>
           </div>
         ))}
       </div>
 
       <div className="price"> 
-        <h2> Price {totalPrice || '0'} </h2>
+        <h2> Price {totalPrice.toFixed(2) || '0'} </h2>
       </div>
     </div>
   );
