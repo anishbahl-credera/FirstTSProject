@@ -95,10 +95,11 @@
     height: 50vh;
 
     position: relative;
-    left: 75px;
+    left: 70px;
 
     display: flex;
     justify-content: center;
+ 
 }
 
 .priceContainer {
