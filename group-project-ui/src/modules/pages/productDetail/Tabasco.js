@@ -5,6 +5,17 @@ import Image from './tabasco.png';
 export default function TabascoConfig() {
   const [hotSauces, setHotSauces] = useState([]);
   const [error, setError] = useState(null);
+  const [dataa, setDataa] = useState(null);
+
+
+  useEffect(() => {
+    document.body.classList.add('bodyTabasco');
+    return () => {
+      document.body.classList.remove('bodyTabasco');
+    };
+  }, []);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,6 +23,7 @@ export default function TabascoConfig() {
         const response = await fetch(`http://localhost:8000`); // Use relative path
         const data = await response.json();
         setHotSauces(data.data[5]);
+        setDataa(data.data[5]);
       } catch (error) {
         setError(error.message);
         console.error('Fetch error:', error);
@@ -22,10 +34,33 @@ export default function TabascoConfig() {
     
   }, []);
 
-  return (<center>
+  async function addToCart(data) {
+    try {
+        const response = await fetch('http://localhost:8000/addcart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) 
+        });
 
- 
-    <div className="bodyTasbaco">
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Item added to cart:', result);
+        return result;
+    } catch (error) {
+        console.error('Error adding item to cart:', error);
+        throw error;
+    }
+}
+
+
+return (
+  <center>
+    <div className="bodyTabasco">
       {error && <div className="error">Load failed: {error}</div>}
       {hotSauces ? (
         <div className="hot-sauce-list">
@@ -45,6 +80,10 @@ export default function TabascoConfig() {
       ) : (
         <div className="loading">Loading...</div>
       )}
+      <div className="button-container">
+        <button className="AddToCart" onClick={() => addToCart(dataa)}>Add to Cart</button>
+      </div>
     </div>
-   </center>);
+  </center>
+  );
 }

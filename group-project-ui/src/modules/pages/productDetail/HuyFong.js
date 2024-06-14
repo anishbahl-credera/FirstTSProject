@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './HuyFong.css';
-import Image from './HuyFong.png';
+import Image from './HuyFong.png'
 
 export default function HuyFongConfig() {
   const [hotSauces, setHotSauces] = useState([]);
   const [error, setError] = useState(null);
+  const [dataa, setDataa] = useState(null);
+
+  useEffect(() => {
+    document.body.classList.add('bodyHuyFong');
+    return () => {
+      document.body.classList.remove('bodyHuyFong');
+    };
+  }, []);
+
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,6 +23,7 @@ export default function HuyFongConfig() {
         const response = await fetch(`http://localhost:8000`); // Use relative path
         const data = await response.json();
         setHotSauces(data.data[1]);
+        setDataa(data.data[1]);
       } catch (error) {
         setError(error.message);
         console.error('Fetch error:', error);
@@ -22,9 +34,32 @@ export default function HuyFongConfig() {
     
   }, []);
 
-  return (<center>
+  async function addToCart(data) {
+    try {
+        const response = await fetch('http://localhost:8000/addcart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) 
+        });
 
- 
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Item added to cart:', result);
+        return result;
+    } catch (error) {
+        console.error('Error adding item to cart:', error);
+        throw error;
+    }
+}
+
+
+return (
+  <center>
     <div className="bodyHuyFong">
       {error && <div className="error">Load failed: {error}</div>}
       {hotSauces ? (
@@ -45,6 +80,10 @@ export default function HuyFongConfig() {
       ) : (
         <div className="loading">Loading...</div>
       )}
+      <div className="button-container">
+        <button className="AddToCart" onClick={() => addToCart(dataa)}>Add to Cart</button>
+      </div>
     </div>
-   </center>);
+  </center>
+  );
 }

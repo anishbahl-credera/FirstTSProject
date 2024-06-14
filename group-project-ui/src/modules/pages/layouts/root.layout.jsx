@@ -10,6 +10,8 @@ import { TiShoppingCart } from "react-icons/ti";
 import { useHistory } from 'react-router-dom';
 import './navbar.css';
 
+// Utilize a layout to decouple page layout (navigation menu/header/footer/side menu) from main app component
+// https://reactrouter.com/web/guides/quick-start
 export const RootLayout = () => (
   <Router>
     <div className="navbar">

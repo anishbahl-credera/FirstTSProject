@@ -51,13 +51,13 @@ export default function ShopPageComponent() {
       {hotSauces.map((sauce, index) => (
                     <div key={index} className="hot-sauce-item">
                         <h2>{sauce.name}</h2>
-                        
+
                         <p>Scoville Level: {sauce.scoville}</p>
                         <p>Price: ${sauce.price}</p>
                         <p>Ingredients: {sauce.ingredients}</p>
                         <button 
                 className="more" 
-                onClick={() => history.push(`/productDetail/${sauce.id}`)}
+                onClick={() => history.push(`/${sauce.id}`)}
               >
                 More...
               </button>

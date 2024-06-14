@@ -4,6 +4,7 @@
 }
 
 body.bodyFranksRedHot {
+    background: linear-gradient(135deg, #000000, #6a0000);
     font-family: diabloF;
     margin: 0;
     background-size: cover;

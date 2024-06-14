@@ -5,6 +5,18 @@ import Image from './cholula.png'
 export default function CholulaConfig() {
   const [hotSauces, setHotSauces] = useState([]);
   const [error, setError] = useState(null);
+  const [dataa, setDataa] = useState(null);
+
+
+
+  useEffect(() => {
+    document.body.classList.add('bodyCholula');
+    return () => {
+      document.body.classList.remove('bodyCholula');
+    };
+  }, []);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,6 +24,7 @@ export default function CholulaConfig() {
         const response = await fetch(`http://localhost:8000`); // Use relative path
         const data = await response.json();
         setHotSauces(data.data[2]);
+        setDataa(data.data[2]);
       } catch (error) {
         setError(error.message);
         console.error('Fetch error:', error);
@@ -22,9 +35,32 @@ export default function CholulaConfig() {
     
   }, []);
 
-  return (<center>
+  async function addToCart(data) {
+    try {
+        const response = await fetch('http://localhost:8000/addcart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) 
+        });
 
- 
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Item added to cart:', result);
+        return result;
+    } catch (error) {
+        console.error('Error adding item to cart:', error);
+        throw error;
+    }
+}
+
+
+return (
+  <center>
     <div className="bodyCholula">
       {error && <div className="error">Load failed: {error}</div>}
       {hotSauces ? (
@@ -45,34 +81,10 @@ export default function CholulaConfig() {
       ) : (
         <div className="loading">Loading...</div>
       )}
+      <div className="button-container">
+        <button className="AddToCart" onClick={() => addToCart(dataa)}>Add to Cart</button>
+      </div>
     </div>
-   </center>);
+  </center>
+  );
 }
-
-
-
-/*
-    return (
-     <div>
-        <div className = "bodyCholula"> 
-        <div className="hot-sauce-list">
-          
-              <div className = "name"> 
-              <h2>{hotSauces.name}</h2>
-
-              <h2>{hotSauces.price}</h2>
-              <h2>{hotSauces.description}</h2>
-              <h2>{hotSauces.ingredients}</h2>
-              <h2>{hotSauces.Scoville}</h2>
-              <h2>{hotSauces.origin}</h2>
-              <h2>{hotSauces.price}</h2>
-
-              
-            </div>
-            </div>
-      </div>
-      </div>
-    );
-  }
-
-  */
