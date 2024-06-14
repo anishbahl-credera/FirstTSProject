@@ -57,7 +57,7 @@ export default function ShopPageComponent() {
                         <p>Ingredients: {sauce.ingredients}</p>
                         <button 
                 className="more" 
-                onClick={() => history.push(`/productDetail/`)}
+                onClick={() => history.push(`/${sauce.id}`)}
               >
                 More...
               </button>
