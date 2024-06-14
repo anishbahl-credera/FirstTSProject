@@ -76,26 +76,20 @@ body.bodyCholula {
     cursor: pointer;
     align-self: center; 
 }
-
 */
 @font-face {
     font-family: diabloF;
     src: url('../../../fonts/font.ttf');
 }
 
-body.bodyCholula {
+.bodyCholula {
     background: linear-gradient(135deg, #000000, #6a0000);
-    margin: 0;
     font-family: diabloF;
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
     height: 100vh;
-    padding: 0;
 }
 
 .bodyCholula .hot-sauce-list {
