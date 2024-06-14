@@ -13,9 +13,6 @@ body.bodyTexasPete {
     background-repeat: no-repeat;
     background-position: center;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     padding: 0; 
 
