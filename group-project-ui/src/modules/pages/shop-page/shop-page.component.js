@@ -37,7 +37,7 @@ export default function ShopPageComponent() {
        <center>
         
         <h1 className="cool-heading">Crediablo</h1>
-      <label htmlFor="search">Search Hot Sauces:</label>
+      
        <h1></h1>
       <input
         type="text"
